@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  josipn-nodeJs-demo:
+    container_name: josipn-nodeJs-demo
+    image:josipn-nodeJs-demo:latest
+    build: .
+    environment:
+      NODE_ENV: "production"
+      MongoConnectionString: "mongodb://mongo/nodeJsTestApp"
+      ServerPort: 3000
+      JwtIssuer: "josipn-nodeJs-demo:latest"
+      JwtAlgorithm: "HS256"
+      JwtExpiresIn: "1d"
+      JwtSecretKey: "q&KsAa{H8JEk^s/`?O{|xe^QU'!bl.?g`Rt0%+7){l@6ebmn%G7<9gUpgJ1zLp0"
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    expose:
+      - 27017
