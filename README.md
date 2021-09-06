@@ -1,4 +1,4 @@
-# NodeJs Test Assignment
+# NodeJs Cars
 
 ## Using NodeJs, typescript, express and mongoDb
 
@@ -7,31 +7,31 @@
 - [NodeJs LTS](https://nodejs.org/en/)
 - [MongoDb](https://docs.mongodb.com/manual/installation/)
 
-**Running in development**
+**Running SERVER in development**
 
-- `npm install `
-- `npm start`
+- `cd server && npm install `
+- `npm run watch`
 
-**Running in container**
+**Running CLIENT in development**
 
-- `docker-compose build`
-- `docker-compose up`
+- `cd client && npm install `
+- `npm run dev`
 
-**Building the docker image for node**
+**DEBUGGER IN VS CODE**
 
-- `docker build .`
-- `docker run <image_hash>`
+- Is set to use nodemon to watch and attach running npm run watch will automatically attach
+- `Set debug auto attach to Smart`
 
 **Running tests**
 
-- `npm test`
+- `npm run test`
 
 ---
 
 ## Database choice
 
-For this demo project I have decided to use mongo db with mongoose orm, the main reason being my experience in this specific ecosystem for the past 8 months
+For this demo project I have decided to use mongo db with mongoose orm
 
-In other ecosystems I prefer to use relational databases(postgre, mssql, ect..) mainly because I consider them more matured, they also provide a reliable database structure
+## Client choice
 
-In cases where I would need fast document access with a flexible schema, which would enable the user to define his own database model I would use mongo
+For this demo project I have decided to use - [Svelte](https://svelte.dev/docs)

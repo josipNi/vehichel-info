@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "outDir": "./built",        
+        "module": "commonjs",
+    },
+    "include": ["**/*.ts"],
+    "exclude": ["node_modules"],
+
+}

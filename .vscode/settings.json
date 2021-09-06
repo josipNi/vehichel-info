@@ -1,9 +1,16 @@
 {
     "cSpell.words": [
         "copyfiles",
+        "josipn-nodejs-demo",
         "nikoli",
         "nikolić",
-        "josipn-nodejs-demo",
-        "signup"
+        "signup",
+        "upsert"
+    ],
+    "debug.javascript.autoAttachSmartPattern": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**",
+        "**/$KNOWN_TOOLS$/**",
+        "**/node_modules/nodemon/**"
     ]
 }
