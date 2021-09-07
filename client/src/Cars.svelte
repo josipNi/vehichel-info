@@ -6,6 +6,9 @@
   let searchState = {};
 
   async function deleteCar(id: string) {
+    if (!confirm("Are you sure you want to delete")) {
+      return;
+    }
     const res = await fetch(`http://localhost:4001/car/${id}`, {
       method: "DELETE",
       headers: $user.headers,
